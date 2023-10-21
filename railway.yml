@@ -1,4 +1,5 @@
-builds:
-  - name: my-app
-    type: node
-    cmd: node server.js
+build:
+  cmd: "npm install"
+  
+deploy:
+  cmd: "npm start"
