@@ -1,0 +1,4 @@
+builds:
+  - name: my-app
+    type: node
+    cmd: node server.js
