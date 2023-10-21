@@ -1,0 +1,104 @@
+Here's my current index.html code that I know works and properly communicates with the database:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Website</title>
+</head>
+<body>
+  <form id="userForm" action="/api/submit" method="POST">
+    <input type="text" id="username" name="username" placeholder="Username">  <!-- Added name attribute -->
+    <input type="text" id="content" name="content" placeholder="Content">  <!-- Added name attribute -->
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
+
+--
+
+here's an older version of my index.html that includes a lot of design, layout, and UI for the reviews that it will let people leave but did not communicate properly with the database:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .fixed-width-btn {
+        width: 75px;
+    }
+        
+        .custom-container {
+            max-width: 800px; /* Adjust this value as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="custom-container"> <!-- Start of custom-container div -->
+
+<!-- Main Title -->
+        <div class="container text-center mt-5">
+            <h1>LicensePlateAnonymous.com</h1>
+            <p>share a little love, have a little fun, or don't...</p>
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+
+<!-- Leave a Review Section -->
+                <div class="col-md-8">
+                    <h2 class="text-left">Leave a Review:</h2>
+                    <form id="reviewForm" action="/addReview" method="post">
+                        <div class="form-group d-flex">
+                            <label for="content" class="sr-only">Review:</label>
+                            <textarea id="content" name="content" class="form-control" rows="3" maxlength="180" placeholder="OR123ABC is a lovely driver, thanks for letting me merge..." required></textarea>
+                            <button type="submit" class="btn btn-outline-secondary btn-submit fixed-width-btn">Submit Review!</button>
+                        </div>
+                        <p class="mb-1">Start the review with the LP# like this: OR123ABC</p>
+                        <p>180 characters max.</p>
+                    </form>
+                    
+
+<!-- Footer Note -->
+                    <div class="mt-5">
+                        <p class="text-left" style="font-weight: bold;">
+                            Do NOT include any identifying details - it'll ruin the whole thing. Names, specific locations, times, descriptions of individuals or vehicles, and anything else non-anonymous will get deleted.
+                        </p>
+                    </div>
+                </div>
+
+<!-- Find a Review Section -->
+                <div class="col-md-4">
+                    <h2 class="text-left">Find a Review:</h2>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="OR123ABC">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary fixed-width-btn" type="button">Find!</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- End of row div -->
+        </div> <!-- End of container div -->
+
+        <!-- Email Note -->
+        <div class="container mt-5 text-center">
+            <p>Something amiss? Email us: <a href="mailto:info@licenseplateanonymous.com" style="color: black; text-decoration: underline;">info@licenseplateanonymous.com</a></p>
+        </div>
+
+    </div> <!-- End of custom-container div -->
+
+</body>
+</html>
+
+--
+
+Update the index.html code so that it properly communicates with the database but also includes the design, layout, and UI

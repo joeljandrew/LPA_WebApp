@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser'); // Move this line up
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
+app.use(cors());
 app.use(express.static('public'));
 app.use(bodyParser.json()); // Move this line up
 app.use(bodyParser.urlencoded({ extended: true })); // To handle URL encoded data
